@@ -1,7 +1,9 @@
-FROM golang:1.21 as builder
+FROM golang:1.22.2-alpine
 WORKDIR /app
+COPY go.mod ./
+RUN go mod tidy
 COPY . .
-RUN go mod download
-RUN go build -o /cicd-demo
-EXPOSE 3000
-CMD ["/cicd-demo"]
+RUN go build -o main ./main.go
+RUN chmod +x main
+EXPOSE 4040
+CMD [ "./main" ]
