@@ -8,7 +8,7 @@ import (
 func homeHandle(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
-		w.Write([]byte("Get method"))
+		w.Write([]byte("Xin chao Hang Nga"))
 	case "POST":
 		w.Write([]byte("Post method"))
 	case "PUT":
