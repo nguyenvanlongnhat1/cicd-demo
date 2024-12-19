@@ -18,7 +18,7 @@ func NewHTTPServer(
 	productHandler *handlers.ProductHandler,
 ) *http.Server {
 	srv := &http.Server{
-		Addr:    ":8080",
+		Addr:    ":3000",
 		Handler: cmd.Router(productHandler),
 	}
 	lc.Append(
