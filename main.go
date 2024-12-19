@@ -28,7 +28,7 @@ func NewHTTPServer(
 				if err != nil {
 					return err
 				}
-				fmt.Println("Starting HTTP server at", srv.Addr)
+				fmt.Println("Starting HTTP server at ", srv.Addr)
 				go srv.Serve(ln)
 				return nil
 			},
